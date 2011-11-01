@@ -1,6 +1,6 @@
 = Prerequisites =
  * Aleph X-Services
- * Perl with this packages: Net::LDAP, Net::LDAP::Server, LWP, XML::Simple, URI, Digest, Crypt, DBI, IO.
+ * Perl with these packages: Net::LDAP, Net::LDAP::Server, LWP, XML::Simple, URI, Digest, Crypt, DBI, IO.
 
 = Installation =
 
