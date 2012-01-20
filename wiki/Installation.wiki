@@ -40,5 +40,5 @@
   }}}
  # Test LDAP server:
   {{{
-  ldapsearch -H ldap://localhost:8000 "(uid=user)" -x
+  ldapsearch -H "ldap://localhost:8000" "(uid=user)" -x
   }}}
