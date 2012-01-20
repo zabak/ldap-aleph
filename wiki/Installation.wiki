@@ -14,7 +14,6 @@
     ENTRYUUID VARCHAR2(50) NOT NULL
   );
   }}}
-
  # Configure LDAPServerConfig.pm:
   {{{
   sub load {
@@ -34,4 +33,12 @@
       $config{'dn:ou=test,dc=mzk,dc=cz'} = \&shibboleth_filter,
       return \%config;
   }
+  }}}
+ # Start LDAP server:
+  {{{
+  nohup ./ldap_server.pl &
+  }}}
+ # Test LDAP server:
+  {{{
+  ldapsearch -H ldap://localhost:8000 "(uid=user)" -x
   }}}
