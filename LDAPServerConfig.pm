@@ -18,6 +18,13 @@ sub load {
 	return \%config;
 }
 
+sub trim($) {
+        my $string = shift;
+        $string =~ s/^\s+//;
+        $string =~ s/\s+$//;
+        return $string;
+}
+
 sub shibboleth_filter {
 	my ($config, $dn, $user) = @_;
 	print "ou=shibboleth,dc=mzk,dc=cz\n";
@@ -49,6 +56,7 @@ sub readers_filter {
 		}
 	}
 	$result{"apple-user-homeDirectory"} = "/Network/Servers/severus.mzk.cz/srv/home/" . $result->{"UIDNUMBER"},
+  $result{"aleph-id"} = trim($user->{"ID"});
 	return ($valid, %result);
 }
 
