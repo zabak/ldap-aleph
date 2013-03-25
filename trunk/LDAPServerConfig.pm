@@ -56,7 +56,7 @@ sub readers_filter {
 		}
 	}
 	$result{"apple-user-homeDirectory"} = "/Network/Servers/severus.mzk.cz/srv/home/" . $result->{"UIDNUMBER"},
-  $result{"aleph-id"} = trim($user->{"ID"});
+	$result{"aleph-id"} = trim($user->{"ID"});
 	return ($valid, %result);
 }
 
